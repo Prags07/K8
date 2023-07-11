@@ -5,7 +5,7 @@ metadata:
   namespace: pragnya
   labels:
     app: dotnet
-spec:  
+spec:
   replicas: 1
   selector:
     matchLabels:
@@ -15,8 +15,8 @@ spec:
       labels:
         app: dotnet
     spec:
-       containers:
-       - name: dotnet
-       image: dotnet:1.0.1
-       ports:
-       - containerPort: 80
+      containers:
+      - name: dotnet
+        image: dotnet:1.0.1
+        ports:
+        - containerPort: 80
