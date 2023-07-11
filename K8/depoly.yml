@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: dotnet
-        image: dotnet:1.0.1
+        image: pragnyasai22/dotnet:1.0.1
         ports:
         - containerPort: 80
