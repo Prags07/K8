@@ -6,7 +6,7 @@ metadata:
   labels:
     app: dotnet
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: dotnet
@@ -17,6 +17,8 @@ spec:
     spec:
       containers:
       - name: dotnet
-        image: pragnyasai22/dotnet:1.0.1
-        ports:
-        - containerPort: 5000
+         image: pragnya.azurecr.io/dotnet:1.0.1
+         ports:
+         - containerPort: 5000
+      imagePullSecrets:
+        - name: secret
