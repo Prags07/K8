@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
       - name: dotnet
-         image: pragnya.azurecr.io/dotnet:1.0.1
-         ports:
-         - containerPort: 5000
+        image: pragnya.azurecr.io/dotnet:1.0.1
+        ports:
+        - containerPort: 5000
       imagePullSecrets:
         - name: secret
