@@ -20,10 +20,8 @@ spec:
       labels:
         app: deploy
     spec:
-      # initContainers:
-      # Init containers are exactly like regular containers, except:
-      # - Init containers always run to completion.
-      # - Each init container must complete successfully before the next one starts.
+      imagePullSecrets:  # Add the imagePullSecrets field
+        - name: mysecretfile  # Name of the secret created
       containers:
         - name: deploy
           image: pragnya.azurecr.io/kube:1.0.3
