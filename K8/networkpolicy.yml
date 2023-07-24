@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: networkpolicy
+  namespace: pragnya
+spec:
+  podSelector:
+    matchLabels:
+      app: kube
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector: {}
